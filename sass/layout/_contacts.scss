@@ -1,0 +1,140 @@
+.contacts {
+    width: 100%;
+    padding: 100px 0px 40px;
+}
+
+.contacts__inner {
+    border-radius: 40px;
+    background: var(--background-container, #665F55);
+    display: flex;
+    padding: 100px;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    align-self: stretch;
+}
+
+.contacts-text {
+    width: 530px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+    flex: 1 0 0;
+}
+
+.contacts-text__heading {
+    color: var(--text-accent, #B0907A);
+    font-feature-settings: 'clig' off, 'liga' off;
+
+    /* Desktop/Heading/heading-2.accent */
+    font-family: Inter;
+    font-size: 60px;
+    font-style: italic;
+    font-weight: 600;
+    line-height: 125%;
+}
+
+.contacts-text__heading .note {
+    color: var(--text-light, #E1D4C9);
+    font-style: normal;
+}
+
+.contacts-text__socials {
+    // width: 204px;
+}
+
+.contacts-text__socials .menu__list {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.contacts-text__socials .menu__list .menu__list-item:nth-child(1) {
+    display: flex;
+    width: 60px;
+    height: 60px;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../../coffee-house/image/twitter.svg);
+    background-size: cover;
+    border-radius: 100px;
+    border: 1px solid var(--border-light, #C1B6AD);
+    cursor: pointer;
+}
+
+.contacts-text__socials .menu__list .menu__list-item:nth-child(2) {
+    display: flex;
+    width: 60px;
+    height: 60px;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../../coffee-house/image/instagram.svg);
+    background-size: cover;
+    border-radius: 100px;
+    border: 1px solid var(--border-light, #C1B6AD);
+    cursor: pointer;
+}
+
+.contacts-text__socials .menu__list .menu__list-item:nth-child(3) {
+    display: flex;
+    width: 60px;
+    height: 60px;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../../coffee-house/image/facebook.svg);
+    background-size: cover;
+    border-radius: 100px;
+    border: 1px solid var(--border-light, #C1B6AD);
+    cursor: pointer;
+}
+
+.contacts__info {
+    width: 530px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+    flex: 1 0 0;
+}
+
+.contacts__info-heading {
+    color: var(--text-light, #E1D4C9);
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 125%;
+}
+
+.menu__list {
+    color: var(--text-light, #E1D4C9);
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%;
+    
+}
+
+.menu__list-item.location::before {
+    content: url(../../coffee-house/image/pin-alt.svg);
+    position: relative;
+    left: -10px;
+}
+
+.menu__list-item.phone::before {
+    content: url(../../coffee-house/image/phone.svg);
+    position: relative;
+    left: -10px;
+}
+
+.menu__list-item.day::before {
+    content: url(../../coffee-house/image/clock.svg);
+    position: relative;
+    left: -10px;
+}
