@@ -1,0 +1,61 @@
+.about {
+    width: 100%;
+}
+
+.about__inner {
+    width: 100%;
+}
+
+.about__title {
+    color: var(--text-dark, #403F3D);
+    font-feature-settings: 'clig' off, 'liga' off;
+
+    /* Desktop/Heading/heading-2 */
+    font-family: Inter;
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 125%;
+    /* 75px */
+}
+.about__title .note{
+    color:#B0907A;
+}
+
+.about__images {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 660px 660px;
+    grid-row: auto auto;
+    grid-column-gap: 40px;
+    grid-row-gap: 40px;
+}
+
+.about__images-item:nth-child(1) {
+    width: 660px;
+    height: 590px;
+    border-radius: 20px;
+    background-image: url(../../coffee-house/image/about-1.png);
+    background-size: 100%;
+}
+.about__images-item:nth-child(3) {
+    width: 660px;
+    height: 430px;
+    border-radius: 20px;
+    background-image: url(../../coffee-house/image/about-2.png);
+    background-size: 100%;
+}
+.about__images-item:nth-child(2) {
+    width: 660px;
+    height: 430px;
+    border-radius: 20px;
+    background-image: url(../../coffee-house/image/about-3.png);
+    background-size: 100%;
+}
+.about__images-item:nth-child(4) {
+    width: 660px;
+    height: 590px;
+    border-radius: 20px;
+    background-image: url(../../coffee-house/image/about-4.png);
+    background-size: 100%;
+}
