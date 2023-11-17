@@ -1,0 +1,107 @@
+.mobile-app {
+    width: 100%;
+}
+
+.mobile-app__inner {
+    width: 100%;
+    padding-top: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mobile-app__text {
+    width: 630px;
+    height: 342px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.mobile-app__heading {
+    color: var(--text-dark, #403F3D);
+    font-family: Inter;
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 125%;
+}
+
+.mobile-app__heading .note {
+    color: var(--text-accent, #B0907A);
+    font-style: italic;
+}
+
+.mobile-app__subheading {
+    color: var(--text-dark, #403F3D);
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+}
+.mobile-app__button{
+    width: 440px;
+    display: flex;
+    justify-content: space-between;
+
+}
+.mobile-app__btn {
+    display: flex;
+    width: 160px;
+    padding: 12px 20px;
+    align-items: center;
+    gap: 8px;
+    border-radius: 100px;
+    border: 1px solid var(--border-dark, #665F55);
+    cursor: pointer;
+}
+
+.app-store .mobile-app__btn-image {
+    width: 36px;
+    height: 36px;
+    background-image: url(../../coffee-house/image/icon.svg);
+    background-size: cover;
+}
+
+.mobile-app__btn-text {
+    width: 100px;
+    height: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+}
+
+.mobile-app__btn-heading {
+    color: var(--text-dark, #403F3D);
+    text-align: center;
+    font-family: Inter;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 140%;
+}
+
+.mobile-app__btn-subheading {
+    color: var(--text-dark, #403F3D);
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%;
+}
+
+.google-store .mobile-app__btn-image {
+    width: 36px;
+    height: 36px;
+    background-image: url(../../coffee-house/image/gs.svg);
+    background-size: cover;
+}
+
+.mobile-app__image {
+    width: 630px;
+    height: 630px;
+    background-image: url(../../coffee-house/image/mobile-screens.png);
+    background-size: 100%;
+}
