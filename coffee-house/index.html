@@ -5,39 +5,71 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
     <title>Document</title>
 </head>
 
-<body>
-    <div class="wrapper">
-        <header>
-            <div class="container">
-                <div class="header__inner">
-                    <a href="" class="header__logo">Logo</a>
-                    <nav class="menu">
-                        <ul class="menu__list">
-                            <li class="menu__list-item">Favorite coffee</li>
-                            <li class="menu__list-item">About</li>
-                            <li class="menu__list-item">Mobile App</li>
-                            <li class="menu__list-item">Contact us</li>
-                        </ul>
-                    </nav>
-                    <a href="" class="header__link">Menu</a>
+<body class="body">
+
+    <header>
+        <div class="container">
+            <div class="header__inner">
+                <a href="./index.html" class="header__logo"></a>
+                <nav class="menu">
+                    <ul class="menu__list">
+                        <li class="menu__list-item">Favorite coffee</li>
+                        <li class="menu__list-item">About</li>
+                        <li class="menu__list-item">Mobile App</li>
+                        <li class="menu__list-item">Contact us</li>
+                    </ul>
+                </nav>
+                <a href="">
+                    <div class="header__link">Menu</div>
+                </a>
+            </div>
+        </div>
+    </header>
+    <section class="hero">
+        <div class="container">
+            <div class="hero__inner">
+                <div class="hero__text">
+                    <div class="hero__text-heading">Enjoy premium coffee at our charming cafe</div>
+                    <div class="hero__text-subheading">With its inviting atmosphere and delicious coffee options,
+                        the Coffee House Resource is a popular destination for coffee lovers and those seeking a
+                        warm and inviting space to enjoy their favorite beverage.</div>
+                    <div class="hero__text-button">Menu</div>
                 </div>
             </div>
-        </header>
-        <section class="hero">
-            <div class="container">
-                <div class="hero__inner">
-                    <div class="hero__text">
-                        <div class="hero__text-heading">Enjoy premium coffee at our charming cafe</div>
-                        <div class="hero__text-subheading">With its inviting atmosphere and delicious coffee options, the Coffee House Resource is a popular destination for coffee lovers and those seeking a warm and inviting space to enjoy their favorite beverage.</div>
-                        <div class="hero__text-button">Menu</div>
+        </div>
+    </section>
+    <section class="favorite-coffee">
+        <div class="container">
+            <div class="favorite-coffee__inner">
+                <div class="favorite-coffee__title">Choose your favorite coffee</div>
+                <div class="favorite-coffee__slider">
+                    <div class="slider-button__slider-left"></div>
+                    <div class="favorite-coffee__slider-item">
+                        <div class="slider-item__image"></div>
+                        <div class="slider-item__text">
+                            <div class="slider-item__heading">S’mores Frappuccino</div>
+                            <div class="slider-item__subheading">This new drink takes an espresso and mixes it with
+                                brown sugar and cinnamon before being topped with oat milk.</div>
+                            <div class="slider-item__price">$5.50</div>
+                        </div>
                     </div>
+                    <div class="slider-button__slider-right"></div>
+                </div>
+
+                <div class="favorite-coffee__slider-stripes">
+                    <div class="slider-stripes-item active"></div>
+                    <div class="slider-stripes-item"></div>
+                    <div class="slider-stripes-item"></div>
                 </div>
             </div>
-        </section>
-    </div>
+        </div>
+    </section>
+
 </body>
 
 </html>
