@@ -28,7 +28,7 @@
 .header__logo {
   width: 100px;
   height: 60px;
-  background-image: url(../../coffee-house/image/logo.png);
+  background-image: url(../../assets/images/logo.png);
   background-size: 100%;
 }
 
@@ -62,7 +62,7 @@
 }
 
 .header__link::after {
-  content: url(../../coffee-house/image/coffee-cup.png);
+  content: url(../../assets/images/coffee-cup.png);
   position: absolute;
   left: 52px;
 }
@@ -73,7 +73,7 @@
 }
 
 .hero__inner {
-  background-image: url(../../coffee-house/image/img-hero.jpg);
+  background-image: url(../../assets/images/img-hero.jpg);
   width: 1360px;
   height: 644px;
   border-radius: 40px;
@@ -166,7 +166,7 @@
 .slider-item__image {
   width: 480px;
   height: 480px;
-  background-image: url(../../coffee-house/image/coffee-slider-1.png);
+  background-image: url(../../assets/images/coffee-slider-1.png);
   background-size: 100%;
 }
 
@@ -213,7 +213,7 @@
   height: 60px;
   justify-content: center;
   align-items: center;
-  background-image: url(../../coffee-house/image/arrow-left.svg);
+  background-image: url(../../assets/icons/arrow-left.svg);
   background-size: cover;
   border-radius: 100px;
   border: 1px solid var(--border-dark, #665F55);
@@ -226,7 +226,7 @@
   height: 60px;
   justify-content: center;
   align-items: center;
-  background-image: url(../../coffee-house/image/arrow-right.svg);
+  background-image: url(../../assets/icons/arrow-right.svg);
   background-size: cover;
   border-radius: 100px;
   border: 1px solid var(--border-dark, #665F55);
@@ -294,7 +294,7 @@
   width: 660px;
   height: 590px;
   border-radius: 20px;
-  background-image: url(../../coffee-house/image/about-1.png);
+  background-image: url(../../assets/images/about-1.png);
   background-size: 100%;
 }
 
@@ -302,7 +302,7 @@
   width: 660px;
   height: 430px;
   border-radius: 20px;
-  background-image: url(../../coffee-house/image/about-2.png);
+  background-image: url(../../assets/images/about-2.png);
   background-size: 100%;
 }
 
@@ -310,7 +310,7 @@
   width: 660px;
   height: 430px;
   border-radius: 20px;
-  background-image: url(../../coffee-house/image/about-3.png);
+  background-image: url(../../assets/images/about-3.png);
   background-size: 100%;
 }
 
@@ -318,7 +318,7 @@
   width: 660px;
   height: 590px;
   border-radius: 20px;
-  background-image: url(../../coffee-house/image/about-4.png);
+  background-image: url(../../assets/images/about-4.png);
   background-size: 100%;
 }
 
@@ -385,7 +385,7 @@
 .app-store .mobile-app__btn-image {
   width: 36px;
   height: 36px;
-  background-image: url(../../coffee-house/image/icon.svg);
+  background-image: url(../../assets/icons/icon.svg);
   background-size: cover;
 }
 
@@ -420,14 +420,14 @@
 .google-store .mobile-app__btn-image {
   width: 36px;
   height: 36px;
-  background-image: url(../../coffee-house/image/gs.svg);
+  background-image: url(../../assets/icons/gs.svg);
   background-size: cover;
 }
 
 .mobile-app__image {
   width: 630px;
   height: 630px;
-  background-image: url(../../coffee-house/image/mobile-screens.png);
+  background-image: url(../../assets/images/mobile-screens.png);
   background-size: 100%;
 }
 

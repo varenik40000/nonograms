@@ -31,7 +31,7 @@
 .header__logo {
     width: 100px;
     height: 60px;
-    background-image: url(../../coffee-house/image/logo.png);
+    background-image: url(../../assets/images/logo.png);
     background-size: 100%;
 
 }
@@ -70,7 +70,7 @@
 }
 
 .header__link::after {
-    content: url(../../coffee-house/image/coffee-cup.png);
+    content: url(../../assets/images/coffee-cup.png);
     position: absolute;
     left: 52px;
 }
@@ -81,7 +81,7 @@
 }
 
 .hero__inner {
-    background-image: url(../../coffee-house/image/img-hero.jpg);
+    background-image: url(../../assets/images/img-hero.jpg);
     width: 1360px;
     height: 644px;
     border-radius: 40px;
