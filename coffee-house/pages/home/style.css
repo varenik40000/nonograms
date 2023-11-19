@@ -123,6 +123,7 @@
   border-radius: 100px;
   background-color: #E1D4C9;
   font: 16px sans-serif;
+  cursor: pointer;
 }
 
 .favorite-coffee {
@@ -486,7 +487,7 @@
   height: 60px;
   justify-content: center;
   align-items: center;
-  background-image: url(../../coffee-house/image/twitter.svg);
+  background-image: url(../../assets/icons/twitter.svg);
   background-size: cover;
   border-radius: 100px;
   border: 1px solid var(--border-light, #C1B6AD);
@@ -499,7 +500,7 @@
   height: 60px;
   justify-content: center;
   align-items: center;
-  background-image: url(../../coffee-house/image/instagram.svg);
+  background-image: url(../../assets/icons/instagram.svg);
   background-size: cover;
   border-radius: 100px;
   border: 1px solid var(--border-light, #C1B6AD);
@@ -512,7 +513,7 @@
   height: 60px;
   justify-content: center;
   align-items: center;
-  background-image: url(../../coffee-house/image/facebook.svg);
+  background-image: url(../../assets/icons/facebook.svg);
   background-size: cover;
   border-radius: 100px;
   border: 1px solid var(--border-light, #C1B6AD);
@@ -549,19 +550,19 @@
 }
 
 .menu__list-item.location::before {
-  content: url(../../coffee-house/image/pin-alt.svg);
+  content: url(../../assets/icons/pin-alt.svg);
   position: relative;
   left: -10px;
 }
 
 .menu__list-item.phone::before {
-  content: url(../../coffee-house/image/phone.svg);
+  content: url(../../assets/icons/phone.svg);
   position: relative;
   left: -10px;
 }
 
 .menu__list-item.day::before {
-  content: url(../../coffee-house/image/clock.svg);
+  content: url(../../assets/icons/clock.svg);
   position: relative;
   left: -10px;
 }/*# sourceMappingURL=style.css.map */
