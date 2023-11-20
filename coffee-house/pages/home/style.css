@@ -32,7 +32,7 @@
   background-size: 100%;
 }
 
-.menu {
+.nav-menu {
   width: 456px;
   color: var(--text-dark, #403F3D);
   font-feature-settings: "clig" off, "liga" off;
@@ -45,7 +45,7 @@
   /* 24px */
 }
 
-.menu__list {
+.nav-menu__list {
   width: 456px;
   display: flex;
   justify-content: space-between;
@@ -54,17 +54,36 @@
   list-style: none;
 }
 
+.header__inner a {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+}
+
 .header__link {
   display: block;
   width: 72px;
   height: 28px;
   position: relative;
+  color: var(--text-dark, #403F3D);
+  font-feature-settings: "clig" off, "liga" off;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%;
 }
 
 .header__link::after {
   content: url(../../assets/images/coffee-cup.png);
   position: absolute;
   left: 52px;
+}
+
+.header__link-line {
+  width: 72px;
+  height: 2px;
+  background: #403F3D;
 }
 
 .hero {
