@@ -63,6 +63,7 @@
 
 // .menu__list-item {}
 .header__inner a {
+    color: var(--text-dark, #403F3D);
     display: flex;
     flex-direction: column;
     text-decoration: none;
