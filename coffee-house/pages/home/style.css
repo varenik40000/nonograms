@@ -55,6 +55,7 @@
 }
 
 .header__inner a {
+  color: var(--text-dark, #403F3D);
   display: flex;
   flex-direction: column;
   text-decoration: none;
@@ -145,6 +146,11 @@
   cursor: pointer;
 }
 
+.hero__text-button a {
+  color: var(--text-dark, #403F3D);
+  text-decoration: none;
+}
+
 .favorite-coffee {
   width: 100%;
 }
@@ -192,6 +198,10 @@
 
 .slider-item__text {
   width: 480px;
+  height: 140px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .slider-item__heading {
@@ -288,22 +298,22 @@
 .about__title {
   color: var(--text-dark, #403F3D);
   font-feature-settings: "clig" off, "liga" off;
-  /* Desktop/Heading/heading-2 */
   font-family: Inter;
   font-size: 60px;
   font-style: normal;
   font-weight: 600;
   line-height: 125%;
-  /* 75px */
 }
 
 .about__title .note {
   color: #B0907A;
+  font-style: italic;
 }
 
 .about__images {
   width: 100%;
   display: grid;
+  padding-top: 40px;
   grid-template-columns: 660px 660px;
   grid-row: auto auto;
   grid-column-gap: 40px;
@@ -340,6 +350,8 @@
   border-radius: 20px;
   background-image: url(../../assets/images/about-4.png);
   background-size: 100%;
+  position: relative;
+  top: -160px;
 }
 
 .mobile-app {
@@ -348,7 +360,7 @@
 
 .mobile-app__inner {
   width: 100%;
-  padding-top: 100px;
+  padding-top: 0px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -506,8 +518,6 @@
   height: 60px;
   justify-content: center;
   align-items: center;
-  background-image: url(../../assets/icons/twitter.svg);
-  background-size: cover;
   border-radius: 100px;
   border: 1px solid var(--border-light, #C1B6AD);
   cursor: pointer;
@@ -519,8 +529,6 @@
   height: 60px;
   justify-content: center;
   align-items: center;
-  background-image: url(../../assets/icons/instagram.svg);
-  background-size: cover;
   border-radius: 100px;
   border: 1px solid var(--border-light, #C1B6AD);
   cursor: pointer;
@@ -532,11 +540,30 @@
   height: 60px;
   justify-content: center;
   align-items: center;
-  background-image: url(../../assets/icons/facebook.svg);
-  background-size: cover;
   border-radius: 100px;
   border: 1px solid var(--border-light, #C1B6AD);
   cursor: pointer;
+}
+
+.contacts-text__socials .menu__list .menu__list-item:nth-child(1) .contacts-text__socials-img {
+  width: 24px;
+  height: 24px;
+  background-image: url(../../assets/icons/twitter.svg);
+  background-size: cover;
+}
+
+.contacts-text__socials .menu__list .menu__list-item:nth-child(2) .contacts-text__socials-img {
+  width: 24px;
+  height: 24px;
+  background-image: url(../../assets/icons/instagram.svg);
+  background-size: cover;
+}
+
+.contacts-text__socials .menu__list .menu__list-item:nth-child(3) .contacts-text__socials-img {
+  width: 24px;
+  height: 24px;
+  background-image: url(../../assets/icons/facebook.svg);
+  background-size: cover;
 }
 
 .contacts__info {
@@ -566,6 +593,10 @@
   font-style: normal;
   font-weight: 600;
   line-height: 150%;
+}
+
+.menu__list li {
+  list-style-type: none;
 }
 
 .menu__list-item.location::before {

@@ -58,8 +58,6 @@
     height: 60px;
     justify-content: center;
     align-items: center;
-    background-image: url(../../assets/icons/twitter.svg);
-    background-size: cover;
     border-radius: 100px;
     border: 1px solid var(--border-light, #C1B6AD);
     cursor: pointer;
@@ -71,8 +69,6 @@
     height: 60px;
     justify-content: center;
     align-items: center;
-    background-image: url(../../assets/icons/instagram.svg);
-    background-size: cover;
     border-radius: 100px;
     border: 1px solid var(--border-light, #C1B6AD);
     cursor: pointer;
@@ -84,11 +80,27 @@
     height: 60px;
     justify-content: center;
     align-items: center;
-    background-image: url(../../assets/icons/facebook.svg);
-    background-size: cover;
     border-radius: 100px;
     border: 1px solid var(--border-light, #C1B6AD);
     cursor: pointer;
+}
+.contacts-text__socials .menu__list .menu__list-item:nth-child(1) .contacts-text__socials-img {
+    width: 24px;
+    height: 24px;
+    background-image: url(../../assets/icons/twitter.svg);
+    background-size: cover;
+}
+.contacts-text__socials .menu__list .menu__list-item:nth-child(2) .contacts-text__socials-img {
+    width: 24px;
+    height: 24px;
+    background-image: url(../../assets/icons/instagram.svg);
+    background-size: cover;
+}
+.contacts-text__socials .menu__list .menu__list-item:nth-child(3) .contacts-text__socials-img {
+    width: 24px;
+    height: 24px;
+    background-image: url(../../assets/icons/facebook.svg);
+    background-size: cover;
 }
 
 .contacts__info {
@@ -119,6 +131,9 @@
     font-weight: 600;
     line-height: 150%;
     
+}
+.menu__list li{
+    list-style-type:  none;
 }
 
 .menu__list-item.location::before {

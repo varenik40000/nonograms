@@ -47,6 +47,10 @@
 
 .slider-item__text {
     width: 480px;
+    height: 140px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .slider-item__heading {
