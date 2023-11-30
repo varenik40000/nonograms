@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
+    <link rel="icon" href="../../assets/icons/favicon.svg" type="image/x-icon">
     <title>Menu</title>
 </head>
 
@@ -15,18 +16,22 @@
     <header>
         <div class="container">
             <div class="header__inner">
-                <a href="../../index.html" class="header__logo"></a>
+                <a href="./index.html" class="header__logo"></a>
                 <nav class="nav-menu">
                     <ul class="nav-menu__list">
-                        <li class="nav-menu__list-item"><a href="../home/index.html#favorite-coffee">Favorite coffee</a></li>
-                        <li class="nav-menu__list-item"><a href="../home/index.html#about">About</a></li>
-                        <li class="nav-menu__list-item"><a href="../home/index.html#mobile-app">Mobile App</a></li>
-                        <li class="nav-menu__list-item"><a href="#contacts">Contact us</a></li>
+                        <li class="nav-menu__list-item"><a class="nav-link"
+                                href="../home/index.html#favorite-coffee">Favorite coffee</a>
+                        </li>
+                        <li class="nav-menu__list-item"><a class="nav-link" href="../home/index.html#about">About</a>
+                        </li>
+                        <li class="nav-menu__list-item"><a class="nav-link" href="../home/index.html#mobile-app">Mobile
+                                App</a></li>
+                        <li class="nav-menu__list-item"><a class="nav-link" href="#contacts">Contact us</a></li>
                     </ul>
                 </nav>
-                <a href="../menu/index.html">
-                    <div class="header__link">Menu</div>
-                    <div class="header__link-line"></div>
+                <a href="../../pages/menu/index.html">
+                    <div class="header__link">Menu<div class="header__link-img"></div>
+                    </div>
                 </a>
             </div>
         </div>
@@ -82,7 +87,8 @@
                         <div class="dish-img tea"></div>
                         <div class="dish-description">
                             <div class="dish-heading">Sea buckthorn</div>
-                            <div class="dish-subheading">Toning sweet black tea with sea buckthorn, fresh thyme and cinnamon
+                            <div class="dish-subheading">Toning sweet black tea with sea buckthorn, fresh thyme and
+                                cinnamon
                             </div>
                             <div class="dish-price">$5.50</div>
                         </div>
@@ -95,24 +101,45 @@
 
     <section class="contacts">
         <div class="container">
-            <div class="contacts__inner">
+            <div class="contacts__inner" id="contacts">
                 <div class="contacts-text">
-                    <div class="contacts-text__heading" id="contacts"><span class="note">Sip, Savor, Smile. </span>It’s coffee time!
+                    <div class="contacts-text__heading"><span class="note">Sip, Savor, Smile. </span>It’s coffee time!
                     </div>
                     <div class="contacts-text__socials">
                         <ul class="menu__list">
-                            <li class="menu__list-item"><div class="contacts-text__socials-img"></div></li>
-                            <li class="menu__list-item"><div class="contacts-text__socials-img"></div></li>
-                            <li class="menu__list-item"><div class="contacts-text__socials-img"></div></li>
+                            <li class="menu__list-item">
+                                <div class="contacts-text__socials-img"></div>
+                            </li>
+                            <li class="menu__list-item">
+                                <div class="contacts-text__socials-img"></div>
+                            </li>
+                            <li class="menu__list-item">
+                                <div class="contacts-text__socials-img"></div>
+                            </li>
                         </ul>
                     </div>
                 </div>
                 <div class="contacts__info">
                     <div class="contacts__info-heading">Contact us</div>
                     <ul class="contacts__info menu__list">
-                        <li class="menu__list-item location">8558 Green Rd., LA</li>
-                        <li class="menu__list-item phone">+1 (603) 555-0123</li>
-                        <li class="menu__list-item day">Mon-Sat: 9:00 AM – 23:00 PM</li>
+                        <li class="menu__list-item"><a href="https://maps.app.goo.gl/JEnaFTppjAJpKePA8" target="_blank">
+                                <div class="menu__list-item-block">
+                                    <div class="menu__list-item-img location"></div>
+                                    <div class="menu__list-item-text">8558 Green Rd., LA</div>
+                                </div>
+                            </a></li>
+                        <li class="menu__list-item"><a href="tel:+1(603)555-0123">
+                                <div class="menu__list-item-block">
+                                    <div class="menu__list-item-img phone"></div>
+                                    <div class="menu__list-item-text">+1 (603) 555-0123</div>
+                                </div>
+                            </a></li>
+                        <li class="menu__list-item">
+                            <div class="menu__list-item-block">
+                                <div class="menu__list-item-img day"></div>
+                                <div class="menu__list-item-text">Mon-Sat: 9:00 AM – 23:00 PM</div>
+                            </div>
+                        </li>
                     </ul>
                 </div>
             </div>
