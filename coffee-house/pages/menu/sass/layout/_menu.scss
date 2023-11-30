@@ -25,7 +25,8 @@
     font-weight: 600;
     line-height: 125%;
 }
-.menu_inner-heading span{
+
+.menu_inner-heading span {
     color: var(--text-accent, #B0907A);
 }
 
@@ -41,9 +42,11 @@
     font-weight: 600;
     line-height: 150%;
 }
+
 .menu__inner-tabs {
     list-style-type: none;
 }
+
 .tabs__list-item {
     display: flex;
     padding: 11px 16px 11px 8px;
@@ -57,6 +60,9 @@
     text-decoration: none;
 }
 
+.tabs__list-item:hover {
+    background: #665F55;
+}
 
 .tabs__list-item.active {
     background: var(--background-container, #665F55);

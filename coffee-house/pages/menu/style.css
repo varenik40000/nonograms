@@ -174,6 +174,10 @@
   text-decoration: none;
 }
 
+.tabs__list-item:hover {
+  background: #665F55;
+}
+
 .tabs__list-item.active {
   background: var(--background-container, #665F55);
   color: var(--text-light, #E1D4C9);
@@ -486,7 +490,7 @@
   line-height: 125%;
 }
 
-.menu__list {
+.contacts__info.menu__list {
   color: var(--text-light, #E1D4C9);
   font-family: Inter;
   font-size: 16px;
@@ -495,24 +499,85 @@
   line-height: 150%;
 }
 
-.menu__list li {
+.menu__list-item {
   list-style-type: none;
+  display: flex;
 }
 
-.menu__list-item.location::before {
-  content: url(../../assets/icons/pin-alt.svg);
-  position: relative;
-  left: -10px;
+.menu__list-item-block {
+  display: flex;
+  justify-content: space-between;
 }
 
-.menu__list-item.phone::before {
-  content: url(../../assets/icons/phone.svg);
-  position: relative;
-  left: -10px;
+.menu__list-item-img.location {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+  background: url(../../assets/icons/pin-alt.svg);
 }
 
-.menu__list-item.day::before {
-  content: url(../../assets/icons/clock.svg);
+.menu__list-item-img.phone {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+  background: url(../../assets/icons/phone.svg);
+}
+
+.menu__list-item-img.day {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+  background: url(../../assets/icons/clock.svg);
+}
+
+.contacts-text__socials .menu__list .menu__list-item:hover {
+  background-color: #E1D4C9;
+}
+
+.contacts-text__socials .menu__list .menu__list-item:nth-child(1):hover .contacts-text__socials-img,
+.contacts-text__socials .menu__list .menu__list-item:nth-child(2):hover .contacts-text__socials-img,
+.contacts-text__socials .menu__list .menu__list-item:nth-child(3):hover .contacts-text__socials-img {
+  filter: invert(50%) brightness(50%) contrast(50%);
+}
+
+.contacts__info .menu__list-item:nth-child(1):hover,
+.contacts__info .menu__list-item:nth-child(2):hover {
+  display: flex;
+  text-decoration: none;
+  color: #000;
   position: relative;
-  left: -10px;
+}
+
+.contacts__info .menu__list-item a {
+  text-decoration: none;
+}
+
+.contacts__info .menu__list-item a:visited,
+.contacts__info .menu__list-item a:link,
+.contacts__info .menu__list-item a:active,
+.contacts__info .menu__list-item a:hover {
+  color: #E1D4C9;
+  text-decoration: none;
+}
+
+.contacts__info .menu__list-item:nth-child(1):hover,
+.contacts__info .menu__list-item:nth-child(2):hover {
+  cursor: pointer;
+}
+
+.contacts__info .menu__list-item:nth-child(1):after,
+.contacts__info .menu__list-item:nth-child(2):after {
+  content: "";
+  background-color: #E1D4C9;
+  height: 2px;
+  width: 0;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transition: all 0.2s;
+}
+
+.contacts__info .menu__list-item:nth-child(1):hover::after,
+.contacts__info .menu__list-item:nth-child(2):hover::after {
+  width: 100%;
 }/*# sourceMappingURL=style.css.map */
