@@ -62,3 +62,14 @@
     color: var(--text-dark, #403F3D);
     text-decoration: none;
 }
+
+.hero__text-button-img{
+    display: none;
+    width: 20px;
+    height: 20px;
+    content: url(../../assets/images/coffee-cup.png);
+    padding-left: 8px;
+}
+.hero__text-button:hover .hero__text-button-img{
+    display: block;
+}

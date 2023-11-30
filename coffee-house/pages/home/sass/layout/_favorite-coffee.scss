@@ -111,7 +111,23 @@
     border: 1px solid var(--border-dark, #665F55);
     cursor: pointer; 
 }
-
+.slider-button__slider-left:hover,
+.slider-button__slider-right:hover{
+    background: #665F55;
+}
+.slider-button__slider-left:hover{
+    width: 60px;
+    height: 60px;
+    background-image: url(../../assets/icons/arrow-white.svg);
+    background-size: cover;
+    transform: rotate(180deg);
+}
+.slider-button__slider-right:hover{
+    width: 60px;
+    height: 60px;
+    background-image: url(../../assets/icons/arrow-white.svg);
+    background-size: cover;
+}
 .favorite-coffee__slider-stripes {
     width: 144px;
     margin: 0 auto;
