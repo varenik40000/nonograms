@@ -146,6 +146,10 @@
   line-height: 105%;
 }
 
+.hero__text-heading i {
+  color: #B0907A;
+}
+
 .hero__text-subheading {
   color: #E1D4C9;
   font-feature-settings: "clig" off, "liga" off;
@@ -206,6 +210,10 @@
   font-style: normal;
   font-weight: 600;
   line-height: 125%;
+}
+
+.favorite-coffee__title i {
+  color: #B0907A;
 }
 
 .favorite-coffee__slider {
@@ -756,4 +764,92 @@
 .contacts__info .menu__list-item:nth-child(1):hover::after,
 .contacts__info .menu__list-item:nth-child(2):hover::after {
   width: 100%;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1440px) {
+  .container {
+    width: 688px;
+    margin: 0 auto;
+  }
+  .header__inner {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .nav-menu {
+    display: none;
+  }
+  .header__link {
+    display: none;
+  }
+  .nav-menu__icon {
+    display: block;
+    width: 44px;
+    height: 44px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+    border: 1px solid #665F55;
+    position: relative;
+    cursor: pointer;
+  }
+  .nav-menu__icon span,
+  .nav-menu__icon::before,
+  .nav-menu__icon::after {
+    left: 14px;
+    position: absolute;
+    height: 2px;
+    width: 16px;
+    transition: all 0.3s ease 0s;
+    background-color: #403F3D;
+  }
+  .nav-menu__icon::before,
+  .nav-menu__icon::after {
+    content: "";
+  }
+  .nav-menu__icon::before {
+    top: 15px;
+  }
+  .nav-menu__icon::after {
+    bottom: 15px;
+  }
+  .hero__inner {
+    background: center/cover no-repeat url(../../assets/images/img-hero.jpg);
+    width: 688px;
+    height: 644px;
+  }
+  .hero__text {
+    padding-left: 60px;
+  }
+  .about__images {
+    height: 1220px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .about__images-item:nth-child(3) {
+    display: none;
+  }
+  .about__images-item:nth-child(2) {
+    display: none;
+  }
+  .about__images-item:nth-child(4) {
+    position: static;
+  }
+  .mobile-app__inner {
+    padding-top: 100px;
+    height: 1072px;
+    flex-direction: column;
+  }
+  .contacts__inner {
+    flex-direction: column;
+  }
+  .contacts__info {
+    width: 568px;
+    height: 186px;
+    margin: 0 auto;
+  }
+  .contacts__info ul {
+    padding-left: 0px;
+  }
 }/*# sourceMappingURL=style.css.map */
