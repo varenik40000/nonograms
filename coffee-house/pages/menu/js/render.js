@@ -1,35 +1,6 @@
-function showBurger(){
-    let menu__icon = document.querySelector('.nav-menu__icon'),
-    menuBody = document.querySelector('.nav-menu'),
-    menu__list = document.querySelector('.nav-menu__list'),
-    header__link = document.querySelector('.header__link');
-    
-    menu__icon.addEventListener('click', () => {
+import { getProductJSON } from "./getProductJSON.js";
 
-        document.body.classList.toggle('_lock');
-        menu__icon.classList.toggle('_active');
-        menuBody.classList.toggle('_active');
-        header__link.classList.toggle('_active');
-
-      })
-      menu__list.addEventListener('click', () => {
-        document.body.classList.remove('_lock');
-        menu__icon.classList.remove('_active');
-        menuBody.classList.remove('_active');
-        header__link.classList.remove('_active');
-      })
-
-}
-showBurger()
-
-
-async function getProductJSON() {
-    const res = await fetch(`../../pages/menu/products.json`);
-    return await res.json();
-    console.lof(res)
-}
-
-async function showPage() {
+export async function showPage() {
     let productsData = await getProductJSON(),
         sumProduct = 8,
         tabs = document.querySelector('.menu__inner-tabs'),
@@ -37,10 +8,6 @@ async function showPage() {
         sliderBody = document.querySelector('.menu__inner-dishes');
     sliderBody.innerHTML = '';
     // console.log(productsData[0])
-
-
-
-
 
     function randomChar(min = 0, max = 7) {
         let num = Math.floor(Math.random() * (max - min)) + min;
@@ -51,7 +18,7 @@ async function showPage() {
 
         for (let i = 0; i < arr.length; i++) {
             let div = document.createElement('div');
-            div.className = "dish-item";
+            div.className = `dish-item ${arr[randomChar(0, arr.length)].name}`;
             div.innerHTML = `
         <img class="dish-img" src="../../assets/images/${arr[randomChar(0, arr.length)].img}" alt="Coffee picture">
         <div class="dish-description">
@@ -66,7 +33,7 @@ async function showPage() {
 
     function clickTabs() {
 
-        tabs.addEventListener('click', (e) => {g
+        tabs.addEventListener('click', (e) => {
             tab.forEach((el) => el.classList.remove('active'));
             console.log(tab)
 
@@ -77,13 +44,10 @@ async function showPage() {
                 str2 = str.replace(re, '').toLowerCase().trim();
             console.log(str2)
 
-
-
             let prodArr2 = productsData;
             prodArr2 = productsData.filter((product) => product.category === str2);
             sliderBody.innerHTML = ``;
             console.log(prodArr2);
-
 
             productsPrint(prodArr2)
         });
@@ -93,5 +57,3 @@ async function showPage() {
 
     clickTabs()
 }
-showPage()
-
