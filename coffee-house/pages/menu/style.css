@@ -241,38 +241,6 @@
   background-size: 100%;
 }
 
-.dish-item:nth-child(1) .dish-img {
-  background-image: url(../../assets/images/coffee-1.png);
-}
-
-.dish-item:nth-child(2) .dish-img {
-  background-image: url(../../assets/images/coffee-2.png);
-}
-
-.dish-item:nth-child(3) .dish-img {
-  background-image: url(../../assets/images/coffee-3.png);
-}
-
-.dish-item:nth-child(4) .dish-img {
-  background-image: url(../../assets/images/coffee-4.png);
-}
-
-.dish-item:nth-child(5) .dish-img {
-  background-image: url(../../assets/images/coffee-5.png);
-}
-
-.dish-item:nth-child(6) .dish-img {
-  background-image: url(../../assets/images/coffee-6.png);
-}
-
-.dish-item:nth-child(7) .dish-img {
-  background-image: url(../../assets/images/coffee-7.png);
-}
-
-.dish-item:nth-child(8) .dish-img {
-  background-image: url(../../assets/images/coffee-8.png);
-}
-
 .dish-description {
   display: flex;
   padding: 20px;
@@ -340,54 +308,6 @@
 
 .dishes-button__update:hover .dishes-button__img {
   filter: invert(100%) brightness(100%) contrast(100%);
-}
-
-.dish-item:nth-child(1) .dish-img.tea {
-  background-image: url(../../assets/images/tea-1.png);
-}
-
-.dish-item:nth-child(2) .dish-img.tea {
-  background-image: url(../../assets/images/tea-2.png);
-}
-
-.dish-item:nth-child(3) .dish-img.tea {
-  background-image: url(../../assets/images/tea-3.png);
-}
-
-.dish-item:nth-child(4) .dish-img.tea {
-  background-image: url(../../assets/images/tea-4.png);
-}
-
-.dish-item:nth-child(1) .dish-img {
-  background-image: url(../../assets/images/dessert-1.png);
-}
-
-.dish-item:nth-child(2) .dish-img.dessert {
-  background-image: url(../../assets/images/dessert-2.png);
-}
-
-.dish-item:nth-child(3) .dish-img.dessert {
-  background-image: url(../../assets/images/dessert-3.png);
-}
-
-.dish-item:nth-child(4) .dish-img.dessert {
-  background-image: url(../../assets/images/dessert-4.png);
-}
-
-.dish-item:nth-child(5) .dish-img.dessert {
-  background-image: url(../../assets/images/dessert-5.png);
-}
-
-.dish-item:nth-child(6) .dish-img.dessert {
-  background-image: url(../../assets/images/dessert-6.png);
-}
-
-.dish-item:nth-child(7) .dish-img.dessert {
-  background-image: url(../../assets/images/dessert-7.png);
-}
-
-.dish-item:nth-child(8) .dish-img.dessert {
-  background-image: url(../../assets/images/dessert-8.png);
 }
 
 .contacts {
