@@ -6,10 +6,10 @@ function showBurger(){
     
     menu__icon.addEventListener('click', () => {
 
-        document.body.classList.add('_lock');
-        menu__icon.classList.add('_active');
-        menuBody.classList.add('_active');
-        header__link.classList.add('_active');
+        document.body.classList.toggle('_lock');
+        menu__icon.classList.toggle('_active');
+        menuBody.classList.toggle('_active');
+        header__link.classList.toggle('_active');
 
       })
       menu__list.addEventListener('click', () => {
