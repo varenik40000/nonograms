@@ -225,6 +225,10 @@
   align-self: stretch;
 }
 
+.slider-inner {
+  display: flex;
+}
+
 .favorite-coffee__slider-item {
   display: flex;
   width: 480px;
@@ -234,10 +238,13 @@
   gap: 20px;
 }
 
+.favorite-coffee__slider-item:not(:first-child) {
+  display: none;
+}
+
 .slider-item__image {
   width: 480px;
   height: 480px;
-  background-image: url(../../assets/images/coffee-slider-1.png);
   background-size: 100%;
 }
 
