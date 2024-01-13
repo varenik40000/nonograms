@@ -8,11 +8,11 @@ let key = document.querySelectorAll('.key'),
 function printScreenKeyboard() {
   for (let k of key) {
     k.onclick = function () {
-
-      for (let r in result) {
-        if (result[r] === r.textContent) {
-          // console.log('RIGHT'),console.log(result[key]),console.log(key)
-          answer[r].classList.remove('hidden');
+      console.log(k.textContent)
+      for (let key in result) {
+        if (result[key] === k.textContent) {
+          console.log('RIGHT'),console.log(result[key]),console.log(key)
+          answer[key].classList.remove('hidden');
           // checkAnswer()
         }
       }
@@ -45,6 +45,13 @@ function listener() {
         // display.textContent += strKey;
         console.log(strKey);
         toggleActive()
+        for (let key in result) {
+          if (result[key] === strKey) {
+            console.log('RIGHT'),console.log(result[key]),console.log(key)
+            answer[key].classList.remove('hidden');
+            // checkAnswer()
+          }
+        }
       }
       else {
         extra.innerHTML = 'CHANGE input language';
