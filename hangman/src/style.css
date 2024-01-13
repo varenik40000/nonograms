@@ -127,7 +127,7 @@ body {
     color: black;
 }
 
-div .active {
+.key.active {
     background-color: #2d48fa;
     color: black;
 }
