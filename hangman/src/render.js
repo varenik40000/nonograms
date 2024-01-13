@@ -41,6 +41,7 @@ function render() {
             <div class="key" data-str="KeyM">m</div>
             </div>
         </div>
+        <div class="extra"></div>
     </div>
     
   `}
