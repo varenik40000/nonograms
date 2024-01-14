@@ -49,9 +49,9 @@ function Print(arr) {
 
     }
     showAnswer()
-    console.log(result);
+    console.log('result',result);
+    
     return result;
 }
 Print(questionData)
-
 
