@@ -7,6 +7,12 @@ function render() {
         <div class="line2"></div>
         <div class="line3"></div>
         <div class="line4"></div>
+        <div class="man circle"></div>
+        <div class="man stripe1"></div>
+        <div class="man stripe2"></div>
+        <div class="man stripe3"></div>
+        <div class="man stripe4"></div>
+        <div class="man stripe5"></div>
     </div>
     <div class="right">
         <div class="questions"></div>
