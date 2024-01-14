@@ -1,0 +1,262 @@
+* {
+    margin: 0 auto;
+    font-family: "Trebuchet MS", "Helvetica", sans-serif;
+}
+
+body {
+    margin: 0 auto;
+}
+
+.main {
+    margin: 50px auto;
+    display: flex;
+}
+
+.pic {
+    width: 353px;
+    height: 581px;
+    position: relative;
+    border: 3px solid #FFFEFE;
+    /* background: green; */
+
+}
+
+.line1 {
+    width: 42px;
+    height: 353px;
+    transform: rotate(90deg);
+    flex-shrink: 0;
+    border-radius: 5px;
+    border: 3px solid #FFFEFE;
+    background: #000;
+    position: absolute;
+    bottom: 347px;
+    left: 152px;
+}
+
+.line2 {
+    width: 42px;
+    height: 581px;
+    flex-shrink: 0;
+    border-radius: 5px;
+    border: 3px solid #FFFEFE;
+    background: #000;
+    position: absolute;
+    bottom: -2px;
+    left: 42px;
+
+}
+
+.line3 {
+    width: 42px;
+    height: 202.598px;
+    transform: rotate(45deg);
+    flex-shrink: 0;
+    border: 3px solid #FFFEFE;
+    background: #000;
+    position: absolute;
+    bottom: 365px;
+    left: 100px;
+}
+
+.line4 {
+    width: 10px;
+    height: 74px;
+    flex-shrink: 0;
+    background: #000;
+    position: absolute;
+    bottom: 430px;
+    left: 300px;
+}
+
+
+.title {
+    width: 600px;
+    margin: 20px auto;
+}
+
+.textarea {
+    display: block;
+    width: 700px;
+    height: 200px;
+    margin: 20px auto;
+    padding: 10px;
+    font-size: 18px;
+    color: #444444;
+}
+
+.wrapper {
+    width: 460px;
+    margin: 0 auto;
+    padding: 5px;
+    padding-left: 0;
+    padding-bottom: 0;
+    background: #888888;
+    border: 3px solid #222222;
+    border-radius: 5px
+}
+
+.line {
+    clear: both;
+    width: 100%;
+    height: 40px;
+    margin-bottom: 6px
+}
+
+.line div {
+    float: left;
+    width: 40px;
+    height: 40px;
+    margin-left: 6px;
+    line-height: 40px;
+    text-align: center;
+    color: #ffffff;
+    background: #444444;
+    border-radius: 3px;
+    cursor: pointer;
+    text-transform: lowercase;
+}
+
+
+.line div:hover {
+    background: #58c5f0;
+}
+
+.line div:active {
+    background-color: #2d48fa;
+    color: black;
+}
+
+.key.active {
+    background-color: #2d48fa;
+    color: black;
+}
+
+div .press {
+    border: 1px solid #2d48fa;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+    .pic {
+        width: 176px;
+        height: 290px;
+        position: relative;
+        border: 3px solid #FFFEFE;
+        background: green;
+
+    }
+
+    .line1 {
+        width: 21px;
+        height: 176px;
+        transform: rotate(90deg);
+        flex-shrink: 0;
+        border-radius: 5px;
+        border: 3px solid #FFFEFE;
+        background: #000;
+        position: absolute;
+        bottom: 176px;
+        left: 76px;
+    }
+
+    .line2 {
+        width: 21px;
+        height: 290px;
+        flex-shrink: 0;
+        border-radius: 5px;
+        border: 3px solid #FFFEFE;
+        background: #000;
+        position: absolute;
+        bottom: -2px;
+        left: 21px;
+
+    }
+
+    .line3 {
+        width: 21px;
+        height: 101px;
+        transform: rotate(45deg);
+        flex-shrink: 0;
+        border: 3px solid #FFFEFE;
+        background: #000;
+        position: absolute;
+        bottom: 186px;
+        left: 50px;
+    }
+
+    .line4 {
+        width: 5px;
+        height: 37px;
+        flex-shrink: 0;
+        background: #000;
+        position: absolute;
+        bottom: 215px;
+        left: 150px;
+    }
+
+    .right {
+        width: 250px;
+    }
+
+    .answer {
+        display: flex;
+    }
+
+    .answer-item.hidden {
+        background: #000;
+        color: #000;
+    }
+
+    .answer div {
+        width: 30px;
+        height: 30px;
+        margin: 2px;
+        line-height: 30px;
+        text-align: center;
+        color: #ffffff;
+        background: #444444;
+        border-radius: 3px;
+        cursor: pointer;
+        text-transform: lowercase;
+    }
+
+    .textarea {
+        display: block;
+        width: 200px;
+        height: 100px;
+        margin: 20px auto;
+        padding: 10px;
+        font-size: 18px;
+        color: #444444;
+    }
+
+    .wrapper {
+        width: 250px;
+        height: 136px;
+        margin: 0 auto;
+        padding: 0px;
+        background: #888888;
+        border: 2px solid #222222;
+        border-radius: 5px
+    }
+
+
+
+    .wrapper div {
+        float: left;
+        width: 30px;
+        height: 30px;
+        margin: 2px;
+        line-height: 30px;
+        text-align: center;
+        color: #ffffff;
+        background: #444444;
+        border-radius: 3px;
+        cursor: pointer;
+        text-transform: lowercase;
+    }
+
+
+
+
+}
