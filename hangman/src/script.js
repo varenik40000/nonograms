@@ -3,17 +3,19 @@ import { result } from './game.js'
 const body = document.body;
 let key = document.querySelectorAll('.key'),
   answer = document.querySelectorAll('.answer-item'),
+  hidden = document.getElementsByClassName('hidden'),
   extra = document.querySelector('.extra');
 
 function printScreenKeyboard() {
   for (let k of key) {
     k.onclick = function () {
-      console.log(k.textContent)
+      k.classList.add('active');
+      setTimeout(() => k.classList.remove('active'), 100)
+      // console.log(k.textContent)
       for (let key in result) {
         if (result[key] === k.textContent) {
-          console.log('RIGHT'),console.log(result[key]),console.log(key)
           answer[key].classList.remove('hidden');
-          // checkAnswer()
+          checkAnswer()
         }
       }
     }
@@ -47,8 +49,9 @@ function listener() {
         toggleActive()
         for (let key in result) {
           if (result[key] === strKey) {
-            console.log('RIGHT'),console.log(result[key]),console.log(key)
+            // console.log('RIGHT'),console.log(result[key]),console.log(key)
             answer[key].classList.remove('hidden');
+            checkAnswer()
             // checkAnswer()
           }
         }
@@ -64,16 +67,12 @@ function listener() {
 listener()
 
 
-// function checkAnswer() {
-//   let res = '';
-//   console.log(res.length)
-//   let re = /answer-item/gi;
-//   for (let i = 0; i < answer.length; i++) {
-//     answer[i].classList.contains('hidden') !== true
-//     res += answer[i].className;
-//     // console.log(res.length < 1)
 
-//   }
-//   console.log(res.replace(re, ''))
-// }
 
+
+function checkAnswer() {
+  console.log(hidden.length)
+  if (hidden.length < 1) {
+    extra.innerHTML = 'WIN PRESS F5';
+  }
+}
