@@ -66,18 +66,8 @@ function listener() {
 }
 listener()
 
-
-
-
-
 function checkAnswer() {
   console.log(hidden.length)
-
-  // for (let i = 0; hidden.length; i++) {
-
-  // }
-
-
   if (hidden.length < 1) {
     extra.innerHTML = 'WIN PRESS F5';
   }
