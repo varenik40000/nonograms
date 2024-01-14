@@ -68,6 +68,7 @@ body {
     bottom: 430px;
     left: 300px;
 }
+
 .answer {
     display: flex;
 }
@@ -139,7 +140,7 @@ div .press {
         height: 290px;
         position: relative;
         border: 3px solid #FFFEFE;
-        background: green;
+        /* background: green; */
 
     }
 
@@ -189,6 +190,69 @@ div .press {
         position: absolute;
         bottom: 215px;
         left: 150px;
+    }
+
+    .man.circle {
+        width: 50px;
+        height: 50px;
+        flex-shrink: 0;
+        border-radius: 50px;
+        border: 5px solid #909090;
+        background: #FFF;
+        position: absolute;
+        bottom: 155px;
+        left: 124px;
+    }
+
+    .man.stripe1 {
+        width: 5px;
+        height: 65px;
+        /* flex-shrink: 0; */
+        background: #909090;
+        transform: rotate(0deg);
+        position: absolute;
+        bottom: 85px;
+        left: 148px;
+    }
+    .man.stripe2 {
+        width: 5px;
+        height: 45px;
+        /* flex-shrink: 0; */
+        background: #909090;
+        transform: rotate(40deg);
+        position: absolute;
+        bottom: 110px;
+        left: 125px;
+    }
+    .man.stripe3 {
+        width: 5px;
+        height: 45px;
+        flex-shrink: 0;
+        background: #909090;
+        transform: rotate(-40deg);
+        position: absolute;
+        bottom: 110px;
+        left: 170px;
+    }
+    .man.stripe4 {
+        width: 5px;
+        height: 45px;
+        /* flex-shrink: 0; */
+        background: #909090;
+        transform: rotate(40deg);
+        position: absolute;
+        bottom: 45px;
+        left: 125px;
+    }
+    .man.stripe5 {
+        width: 5px;
+        height: 45px;
+        /* flex-shrink: 0; */
+        background: #909090;
+        transform: rotate(-40deg);
+        position: absolute;
+        bottom: 45px;
+        left: 170px;
     }
 
     .right {
