@@ -193,6 +193,7 @@ div .press {
     }
 
     .man.circle {
+        display: none;
         width: 50px;
         height: 50px;
         flex-shrink: 0;
@@ -205,6 +206,7 @@ div .press {
     }
 
     .man.stripe1 {
+        display: none;
         width: 5px;
         height: 65px;
         /* flex-shrink: 0; */
@@ -215,6 +217,7 @@ div .press {
         left: 148px;
     }
     .man.stripe2 {
+        display: none;
         width: 5px;
         height: 45px;
         /* flex-shrink: 0; */
@@ -225,6 +228,7 @@ div .press {
         left: 125px;
     }
     .man.stripe3 {
+        display: none;
         width: 5px;
         height: 45px;
         flex-shrink: 0;
@@ -235,6 +239,7 @@ div .press {
         left: 170px;
     }
     .man.stripe4 {
+        display: none;
         width: 5px;
         height: 45px;
         /* flex-shrink: 0; */
@@ -245,6 +250,7 @@ div .press {
         left: 125px;
     }
     .man.stripe5 {
+        display: none;
         width: 5px;
         height: 45px;
         /* flex-shrink: 0; */

@@ -1,4 +1,4 @@
-export async function getQuestionJSON() {
+async function getQuestionJSON() {
     const res = await fetch(`./src/questions.json`);
     return await res.json();
 }
@@ -54,4 +54,5 @@ function Print(arr) {
     return result;
 }
 Print(questionData)
+
 
