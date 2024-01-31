@@ -17,8 +17,6 @@ function Render() {
         </td>
       </tr>
     </table>
-    <button class="button" type="button">Показать ответ</button>
-    <button class="button check" type="button">Проверить</button>
   `}
 
 let num = randomChar();
@@ -161,6 +159,17 @@ function addItemArray(a) {
   console.log(arrCheck)
 }
 
+async function СheckBlock() {
+  let arr1 = await getArray(),
+    arr2 = arrCheck;
+
+  // if (arr2 === false) return 'YOU LOOSE'
+  console.log('arr1', arr1.toString().replace(/\,/g, ''));
+  console.log('arr2', arr2.toString().replace(/\,/g, ''))
+
+  if (arr1.toString().replace(/\,/g, '') === arr2.toString().replace(/\,/g, '') && true) { console.log(true) } else { console.log(false) }
+
+}
 
 //listener
 let a = {};
@@ -179,6 +188,11 @@ function PickBlock() {
   return a;
 }
 
+function CheckAnswer() {
+  document.body.addEventListener('click', (e) => {
+    СheckBlock()
+  })
+}
 
 
 
@@ -187,3 +201,4 @@ AddItem()
 AddVerticalItemHelp()
 AddGorizontalItemHelp()
 PickBlock()
+CheckAnswer()
