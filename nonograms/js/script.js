@@ -22,6 +22,13 @@ function Render() {
   `}
 
 let num = randomChar();
+let arrCheck = [
+  ["0", "0", "0", "0", "0"],
+  ["0", "0", "0", "0", "0"],
+  ["0", "0", "0", "0", "0"],
+  ["0", "0", "0", "0", "0"],
+  ["0", "0", "0", "0", "0"]
+];
 
 async function getDataJSON() {
   const res = await fetch(`./js/questions.json`);
@@ -147,7 +154,36 @@ async function AddGorizontalItemHelp() {
   }
 }
 
+function addItemArray(a) {
+  let numRows = a.className.toString().replace(/[^+\d]/g, ''),
+    numColumn = a.parentNode.className.toString().replace(/[^+\d]/g, '');
+  a.classList.contains('active') === true ? arrCheck[numColumn][numRows] = '1' : arrCheck[numColumn][numRows] = '0'
+  console.log(arrCheck)
+}
+
+
+//listener
+let a = {};
+
+function PickBlock() {
+  let gameplay = document.querySelector('.game-info.gameplay');
+  // console.log(gameplay)
+  // console.log('ДО',arrCheck)
+  gameplay.addEventListener('click', function (event) {
+    let target = event.target;
+    target.classList.contains('active') ?
+      target.classList.remove('active') : target.classList.add('active');
+    // console.log(target)
+    addItemArray(target)
+  })
+  return a;
+}
+
+
+
+
 Render()
 AddItem()
 AddVerticalItemHelp()
 AddGorizontalItemHelp()
+PickBlock()
