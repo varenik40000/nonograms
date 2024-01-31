@@ -1,0 +1,60 @@
+.game {
+  text-align: center;
+  padding: 0px;
+  border: 1px dashed #888;
+}
+
+.game-tr {
+  border: 1px solid #000;
+  padding: 0px;
+}
+
+.game-info {
+  border: 1px solid #000;
+  padding: 0px;
+}
+
+.game-info .null {
+  border: 1px solid #000;
+  padding: 0px;
+}
+
+.game-info .gorizontal .game_item {
+  width: 20px;
+  height: 20px;
+  border: 1px solid #000;
+  padding: 0px;
+}
+
+.game-info .vertical .game_item {
+  width: 20px;
+  height: 20px;
+  border: 1px solid #000;
+  padding: 0px;
+}
+
+.game-info .gameplay {}
+
+.game-block .gorizontal {}
+
+.game-block .vertical .game_item {
+  width: 20px;
+  height: 20px;
+  border: 1px solid #000;
+  padding: 0px;
+}
+
+.game-block .game_window {}
+
+.game_window-itemTR {}
+
+.game_window-itemTD {
+  width: 20px;
+  height: 20px;
+  border: 1px solid #000;
+  padding: 0px;
+}
+
+.game_window-itemTD.active {
+  background-color: #000;
+}
