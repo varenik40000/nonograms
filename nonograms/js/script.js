@@ -104,9 +104,9 @@ async function AddVerticalItemHelp() {
     for (let j = 0; j < arrHelpNew[i].length; j++) {
       let game_item = document.createElement('td');
       game_item.className = 'game_item';
-      game_item.innerHTML = `${arrHelpNew[i][j]}`;
+      arrHelpNew[i][j] > 0 ? game_item.innerHTML = `${arrHelpNew[i][j]}` : ''
       arrHelpNew[i][j] > 0 ? game_item.style.cssText = 'background: red;' : '';
-      arrHelpNew[i][j] < 1 ? game_item.style.cssText = 'color: white;' : '';
+      // arrHelpNew[i][j] < 1 ? game_item.style.cssText = 'color: white;' : '';
       gameInfoTR.appendChild(game_item);
     }
   }
@@ -144,9 +144,9 @@ async function AddGorizontalItemHelp() {
     for (let j = 0; j < transposeArr[i].length; j++) {
       let game_item = document.createElement('td');
       game_item.className = 'game_item';
-      game_item.innerHTML = `${transposeArr[i][j]}`;
+      transposeArr[i][j] > 0 ? game_item.innerHTML = `${transposeArr[i][j]}` : ''
       transposeArr[i][j] > 0 ? game_item.style.cssText = 'background: red;' : '';
-      transposeArr[i][j] < 1 ? game_item.style.cssText = 'color: white;' : '';
+      // transposeArr[i][j] < 1 ? game_item.style.cssText = 'color: white;' : '';
       gameInfoTR.appendChild(game_item);
     }
   }
@@ -164,10 +164,16 @@ async function СheckBlock() {
     arr2 = arrCheck;
 
   // if (arr2 === false) return 'YOU LOOSE'
-  console.log('arr1', arr1.toString().replace(/\,/g, ''));
-  console.log('arr2', arr2.toString().replace(/\,/g, ''))
+  // console.log('arr1', arr1.toString().replace(/\,/g, ''));
+  // console.log('arr2', arr2.toString().replace(/\,/g, ''))
 
-  if (arr1.toString().replace(/\,/g, '') === arr2.toString().replace(/\,/g, '') && true) { console.log(true) } else { console.log(false) }
+  if (arr1.toString().replace(/\,/g, '') === arr2.toString().replace(/\,/g, '') && true) {
+    // console.log(true)
+    showPopup()
+  } else {
+    // console.log(false)
+    return false
+  }
 
 }
 
@@ -194,6 +200,70 @@ function CheckAnswer() {
   })
 }
 
+//popup
+function showPopup() {
+  document.body.classList.add('_popup');
+  let div = document.createElement('div');
+  div.className = "popup";
+  div.innerHTML = `
+    <div class="popup__content">
+      <div class="popup__content-image">
+          <img src= "./images/cup.png">
+      </div>
+      <div class="popup__content-text">
+        Great! You have solved the nonogram!
+      </div>
+      <div class="popup__close">
+        <img src= "./images/refresh.png">
+      </div>
+    </div>
+    `;
+  document.body.prepend(div);
+  hidePopup();
+
+}
+
+function hidePopup() {
+  let btnClose = document.querySelector('.popup__close'),
+    popupItem = document.querySelector('.popup');
+  // console.log(btnClose)
+  // document.body.addEventListener('click', (event) => {
+  //   // console.log(event.target)
+  // })
+  if (popupItem != null) {
+    btnClose.addEventListener('click', (event) => {
+      // console.log(event)
+      document.body.classList.remove('_popup');
+      popupItem.remove();
+      console.log('HIDE POPUP', popupItem);
+      event.stopPropagation();
+      Reset()
+    });
+    popupItem.addEventListener('click', (event) => {
+      document.body.classList.remove('_popup');
+      popupItem.remove();
+      console.log('HIDE POPUP', popupItem);
+    });
+  }
+}
+
+function Reset() {
+  num = randomChar();
+  arrCheck = [
+    ["0", "0", "0", "0", "0"],
+    ["0", "0", "0", "0", "0"],
+    ["0", "0", "0", "0", "0"],
+    ["0", "0", "0", "0", "0"],
+    ["0", "0", "0", "0", "0"]
+  ];
+
+  Render()
+  AddItem()
+  AddVerticalItemHelp()
+  AddGorizontalItemHelp()
+  PickBlock()
+  CheckAnswer()
+}
 
 
 Render()
