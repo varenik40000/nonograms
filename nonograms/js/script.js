@@ -1,6 +1,15 @@
 function Render() {
   let body = document.body;
   return body.innerHTML = `
+  <div class="wrapper">
+    <div>
+      <ul class="menu">
+        <li class="menu_item solution">Solution</li>
+        <li class="menu_item reset">Reset</li>
+        <li class="menu_item records">Records</li>
+      </ul>
+    </div>
+    <div class="timer"></div>
     <table class="game">
       <tr class="game-tr">
         <td class="game-info null"></td>
@@ -17,6 +26,7 @@ function Render() {
         </td>
       </tr>
     </table>
+  </div>
   `}
 
 let num = randomChar();
@@ -105,7 +115,7 @@ async function AddVerticalItemHelp() {
       let game_item = document.createElement('td');
       game_item.className = 'game_item';
       arrHelpNew[i][j] > 0 ? game_item.innerHTML = `${arrHelpNew[i][j]}` : ''
-      arrHelpNew[i][j] > 0 ? game_item.style.cssText = 'background: red;' : '';
+      arrHelpNew[i][j] > 0 ? game_item.style.cssText = 'background: #61B7CF;' : '';
       // arrHelpNew[i][j] < 1 ? game_item.style.cssText = 'color: white;' : '';
       gameInfoTR.appendChild(game_item);
     }
@@ -145,7 +155,7 @@ async function AddGorizontalItemHelp() {
       let game_item = document.createElement('td');
       game_item.className = 'game_item';
       transposeArr[i][j] > 0 ? game_item.innerHTML = `${transposeArr[i][j]}` : ''
-      transposeArr[i][j] > 0 ? game_item.style.cssText = 'background: red;' : '';
+      transposeArr[i][j] > 0 ? game_item.style.cssText = 'background: #61B7CF;' : '';
       // transposeArr[i][j] < 1 ? game_item.style.cssText = 'color: white;' : '';
       gameInfoTR.appendChild(game_item);
     }
@@ -156,7 +166,7 @@ function addItemArray(a) {
   let numRows = a.className.toString().replace(/[^+\d]/g, ''),
     numColumn = a.parentNode.className.toString().replace(/[^+\d]/g, '');
   a.classList.contains('active') === true ? arrCheck[numColumn][numRows] = '1' : arrCheck[numColumn][numRows] = '0'
-  console.log(arrCheck)
+  // console.log(arrCheck)
 }
 
 async function СheckBlock() {
@@ -202,6 +212,8 @@ function CheckAnswer() {
 
 //popup
 function showPopup() {
+  let time = document.querySelector('.timer').textContent;
+  // console.log(time)
   document.body.classList.add('_popup');
   let div = document.createElement('div');
   div.className = "popup";
@@ -210,6 +222,7 @@ function showPopup() {
       <div class="popup__content-image">
           <img src= "./images/cup.png">
       </div>
+      <div class="time">${time}</div>
       <div class="popup__content-text">
         Great! You have solved the nonogram!
       </div>
@@ -220,13 +233,14 @@ function showPopup() {
     `;
   document.body.prepend(div);
   hidePopup();
-
+  addResultLocalStorage(time)
 }
 
 function hidePopup() {
   let btnClose = document.querySelector('.popup__close'),
     popupItem = document.querySelector('.popup');
   // console.log(btnClose)
+  // console.log(popupItem)
   // document.body.addEventListener('click', (event) => {
   //   // console.log(event.target)
   // })
@@ -235,15 +249,15 @@ function hidePopup() {
       // console.log(event)
       document.body.classList.remove('_popup');
       popupItem.remove();
-      console.log('HIDE POPUP', popupItem);
+      // console.log('HIDE POPUP', popupItem);
       event.stopPropagation();
       Reset()
     });
-    popupItem.addEventListener('click', (event) => {
-      document.body.classList.remove('_popup');
-      popupItem.remove();
-      console.log('HIDE POPUP', popupItem);
-    });
+    // popupItem.addEventListener('click', (event) => {
+    //   document.body.classList.remove('_popup');
+    //   popupItem.remove();
+    //   console.log('HIDE POPUP', popupItem);
+    // });
   }
 }
 
@@ -263,6 +277,9 @@ function Reset() {
   AddGorizontalItemHelp()
   PickBlock()
   CheckAnswer()
+  Timer()
+  listenRecords()
+  listenResetBtn()
 }
 
 
@@ -272,3 +289,128 @@ AddVerticalItemHelp()
 AddGorizontalItemHelp()
 PickBlock()
 CheckAnswer()
+Timer()
+
+function Timer() {
+  let timer = document.querySelector('.timer')
+  let seconds = 0;
+  let minutes = 0;
+  let hours = 0;
+  let interval;
+
+  function UpdateTime() {
+    seconds++;
+    if (seconds === 60) {
+      minutes++;
+      seconds = 0;
+    }
+    if (minutes === 60) {
+      hours++;
+      minutes = 0;
+    }
+    timer.textContent = `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+  }
+
+  function StartTime() {
+    interval = setInterval(UpdateTime, 1000);
+    // console.log(interval)
+  }
+  StartTime()
+}
+
+
+let numLocalStorage = 0;
+
+function addResultLocalStorage(t) {
+  localStorage.setItem(numLocalStorage, t)
+  console.log(localStorage)
+  numLocalStorage++
+
+}
+
+
+
+//records
+function showRecords() {
+  document.body.classList.add('_popup');
+  let div = document.createElement('div');
+  div.className = "popup";
+  div.innerHTML = `
+    <div class="popup__content records">
+      <div class="popup_text"></div>
+      <div class="popup__close records">OK</div>
+    </div>
+    `;
+  document.body.prepend(div);
+
+  for (let i = 0; i < 5; i++) {
+    let key = localStorage.key(i)
+    let record = document.querySelector('.popup_text')
+    let p = document.createElement('p');
+    p.className = "popup_records";
+    p.innerHTML = `${key}: ${localStorage.getItem(key)}`;
+    record.prepend(p)
+  }
+
+  hidePopup();
+}
+
+function listenRecords() {
+  let records = document.querySelector(".menu_item.records");
+  // console.log(records)
+  records.addEventListener("click", () => { showRecords() })
+}
+listenRecords()
+
+function listenResetBtn() {
+  let resetBtn = document.querySelector(".menu_item.reset");
+  // console.log(records)
+  resetBtn.addEventListener("click", () => { Reset() })
+}
+listenResetBtn()
+
+function listenSolutionBtn() {
+  let solutionBtn = document.querySelector(".menu_item.solution");
+//   let gameplay = document.querySelector('.game-info.gameplay');
+//   let game = document.querySelector('.game-block.game_window');
+//   let gameAnswer = document.getElementsByClassName('.gameAnswer');
+//   console.log(gameAnswer)
+
+  solutionBtn.addEventListener("click", () => {
+//     if (game.classList.contains('hidden')) {
+//       game.classList.remove('hidden');
+//     } else {
+//       game.classList.add('hidden');
+//       showAnswer()
+//     }
+console.log('not work')
+  })
+}
+listenSolutionBtn()
+
+
+
+
+// async function showAnswer() {
+//   let arr = await getArray();
+//   let gameplay = document.querySelector('.game-info.gameplay');
+
+//   let gameAnswer = document.createElement('table');
+//   gameAnswer.className = `gameAnswer`;
+//   gameplay.appendChild(gameAnswer);
+
+//   for (let i = 0; i < arr[0].length; i++) {
+//     let gameTR = document.createElement('tr');
+//     gameTR.className = `game_window-itemTR ${i}`;
+//     gameAnswer.appendChild(gameTR);
+
+//     for (let j = 0; j < arr[i].length; j++) {
+//       let gameTD = document.createElement('td');
+//       gameTD.className = `game_window-itemTD ${j}`;
+//       // gameTD.className = `game_window-itemTD`;
+//       // gameTD.innerHTML = `${arr[i][j]}`;
+//       arr[i][j] > 0 ? gameTD.style.cssText = 'background: red;' : '';
+//       gameTR.appendChild(gameTD);
+//     }
+//   }
+// }
