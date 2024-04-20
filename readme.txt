@@ -1,0 +1,1 @@
+https://varenik40000.github.io/nonograms/nonograms/index.html
